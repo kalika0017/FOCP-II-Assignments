@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+const int MAXN = 10000000;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    vector<int> cnt(MAXN + 1);
+
+    for (int i = 2; i <= MAXN; i++) {
+        if (cnt[i] == 0) {
+            for (int j = i; j <= MAXN; j += i) {
+                cnt[j]++;
+            }
+        }
+    }
+
+    int T;
+    cin >> T;
+    while (T--) {
+        int n;
+        cin >> n;
+        cout << (1 << cnt[n]) << '\n';
+    }
+
+    return 0;
+}
