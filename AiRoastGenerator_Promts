@@ -1,0 +1,18 @@
+Write a beginner-friendly C++ console program that generates funny roast messages.
+
+Requirements:
+- Ask the user for their name
+- Store at least 10 roast templates in a vector
+- Use random selection so the roast changes each time
+- Replace the placeholder {name} with the actual user input
+- Handle empty input properly
+- Add comments for beginners
+- Use simple C++ syntax
+
+My C++ roast generator program does not handle empty input correctly.
+If the user presses Enter without typing a name, the output becomes incorrect.
+
+Please fix the code by:
+- Checking if the input is empty
+- Displaying an error message
+- Preventing the program from crashing
